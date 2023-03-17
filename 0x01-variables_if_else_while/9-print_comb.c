@@ -15,6 +15,7 @@ int main(void)
 		if (num == '9')
 		{
 			putchar(num);
+			break;
 		}
 		putchar(num);
 		putchar(',');
