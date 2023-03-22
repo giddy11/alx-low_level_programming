@@ -3,6 +3,6 @@
 
 int main(void)
 {
-	print_alphabet();
+	int print_sign(int n);
 	return (0);
 }
