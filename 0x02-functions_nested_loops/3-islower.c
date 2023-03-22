@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _isLower - check for lower cases
+ * _islower - check for lower cases
  *
  * @c: char type letter
  *
@@ -9,7 +9,7 @@
  *
  */
 
-int _isLower(int c)
+int _islower(int c)
 {
 	if (c >= 'a' && c <= 'z')
 	{

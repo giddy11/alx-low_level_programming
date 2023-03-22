@@ -8,6 +8,6 @@
 
 int main(void)
 {
-	int _isLower(int c);
+	int _islower(int c);
 	return (0);
 }
