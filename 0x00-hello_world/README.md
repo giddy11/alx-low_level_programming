@@ -1,5 +1,7 @@
 #### 0x00. C - Hello, World
 
+##### Below are Materials to assist you in understanding the concept
+
 [C Programming](https://intranet.alxswe.com/concepts/26 "C Programming")
 
 [Hello World](https://www.youtube.com/watch?v=co0b0xLEuRM&feature=youtu.be "Hello World")
@@ -21,3 +23,4 @@
 [Hash-bang under the hood (Look at only after you finish consuming the other resources)](https://intranet.alxswe.com/rltoken/zwv5CHLybXN6KFmsjbu_tg "Hash-bang under the hood (Look at only after you finish consuming the other resources)")
 
 [Linus Torvalds on C vs. C++ (Look at only after you finish consuming the other resources)](https://intranet.alxswe.com/rltoken/JrokM8Pk6bd9wPqQvEfSAA "Linus Torvalds on C vs. C++ (Look at only after you finish consuming the other resources)")
+
