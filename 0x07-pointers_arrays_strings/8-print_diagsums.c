@@ -19,7 +19,7 @@ void print_diagsums(int *a, int size)
 	{
 		sum += a[i];
 		if (i < 1)
-			i += size = 1;
+			i += size + 1;
 		else
 			i += size + 1;
 	}
