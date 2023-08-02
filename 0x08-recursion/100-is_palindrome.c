@@ -50,7 +50,7 @@ int Compare_Odd(char *s, int div1, int div2, int count)
 	if (*(s + div1) == *(s + div2) && *(s + div1) != 0)
 	{
 		count++;
-		return (Compare_Even(s, div1 - 1, div2 + 1, count));
+		return (Compare_Odd(s, div1 - 1, div2 + 1, count));
 	}
 	if ((count * 2) + 1 == div2)
 	{
