@@ -13,8 +13,7 @@
 
 int main(int argc, char *argv[])
 {
-	int i, j, result;
-	char *check_string;
+	int i, j, result, start_index;
 
 	result = 0;
 
@@ -24,8 +23,11 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			check_string = *(argv + i);
-			for (j = 0; check_string[j] != 0; j++)
+			char *check_string = *(argv + i);
+
+			start_index = (*check_string == '-' || *check_string == '+') ? 1 : 0;
+
+			for (j = start_index; check_string[j] != 0; j++)
 			{
 				if (check_string[j] < 48 || check_string[j] > 57)
 				{
