@@ -1,0 +1,6 @@
+alias s="git status"
+alias c="git commit -m"
+alias a="git add ."
+alias add="git add"
+alias p="git push"
+alias pull="git pull"
