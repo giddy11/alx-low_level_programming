@@ -54,12 +54,13 @@ char *_strdup(char *str)
 	char *ptr;
 	int len;
 
-	len = _strlen(str);
-
 	if (str == NULL)
 		return (NULL);
 
+	len = _strlen(str);
+
 	ptr = malloc((len + 1) * sizeof(char));
+
 	if (ptr == NULL)
 		return (NULL);
 
