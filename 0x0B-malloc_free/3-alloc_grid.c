@@ -1,20 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
 
-/**
- * free2DIntArray - a function that frees the memory.
- * @grid: an array of array pointer
- * @height: the row of the array
- */
-void free2DIntArray(int **grid, int height)
-{
-	int i;
-
-	for (i = 0; i < height; i++)
-		free(grid[i]);
-
-	free(grid);
-}
 
 
 /**
@@ -40,12 +26,6 @@ int **alloc_grid(int width, int height)
 	for (i = 0; i < height; i++)
 	{
 		grid[i] = malloc(width * sizeof(int));
-
-		if (grid[i] == NULL)
-		{
-			free2DIntArray(grid, height);
-			return (NULL);
-		}
 
 		for (j = 0; j < width; j++)
 		{
