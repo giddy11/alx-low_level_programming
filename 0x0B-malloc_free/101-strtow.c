@@ -55,22 +55,6 @@ char *allocate_and_copy(int start_word, int end_word, char *str)
 	return (col);
 }
 
-
-/**
- * free_row - free memory allocated for a row of strings
- * @row: pointer to the row
- */
-void free_row(char **row)
-{
-	int i;
-
-	for (i = 0; row[i] != 0; i++)
-	{
-		free(row[i]);
-	}
-	free(row);
-}
-
 /**
  * **strtow - splits a string into words
  * @str: string to split
