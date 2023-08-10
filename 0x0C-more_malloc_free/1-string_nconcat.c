@@ -127,7 +127,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	else
 	{
-		ptr = malloc((len1 + n) * sizeof(char));
+		ptr = malloc((len1 + n + 1) * sizeof(char));
 
 		_strcpy(ptr, s1);
 		_strncat(ptr, s2, n);
