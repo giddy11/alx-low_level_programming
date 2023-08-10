@@ -118,7 +118,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (n >= len2)
 	{
-		ptr = malloc(total_len * sizeof(char));
+		ptr = malloc((total_len + 1) * sizeof(char));
 
 		_strcpy(ptr, s1);
 		_strcat(ptr, s2);
