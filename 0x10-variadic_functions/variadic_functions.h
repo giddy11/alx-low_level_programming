@@ -10,4 +10,18 @@ void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 
+/**
+ * struct formatting_code - Struct format
+ * @sc: The specifiers
+ * @handler_func: The function
+ */
+typedef struct formatting_code
+{
+	char *sc;
+	void (*handler_func)(va_list arg);
+
+} fc;
+
+
+
 #endif
