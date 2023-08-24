@@ -8,9 +8,9 @@
  */
 size_t print_list(const list_t *h)
 {
-	size_t counts
+	size_t counts;
 
-	count = 0;
+	counts = 0;
 
 	for (; h != NULL; h = h->next)
 	{
