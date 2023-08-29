@@ -1,6 +1,30 @@
 #include "lists.h"
 
 /**
+ * add_nodeint - Function that adds a new node at the beginning of a list
+ * @head: pointer to a pointer to the head of the list
+ * @n: The number to be stored in the node to be added
+ *
+ * Return: if success, address of te new element
+ *		else NULL
+ */
+
+listint_t *add_nodeint(listint_t **head, const int n)
+{
+	listint_t *temp;
+
+	temp = malloc(sizeof(listint_t));
+	if (temp == NULL)
+		return (NULL);
+
+	temp->n = n;
+	temp->next = *head;
+	*head = temp;
+
+	return (*head);
+}
+
+/**
  * insert_nodeint_at_index - A function that inserts a new node
  *			at a given position
  * @head: A pointer to a pointer to te head list
@@ -13,10 +37,10 @@
 
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *ptr1, *ptr2, *temp;
+	listint_t *ptr, *prev, *temp;
 	unsigned int count;
 
-	ptr1 = ptr2 = *head;
+	ptr = prev = *head;
 	count = 0;
 
 	temp = malloc(sizeof(listint_t));
@@ -29,24 +53,24 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 	if (idx == 0)
 	{
-		temp->next = ptr1;
-		*head = temp;
-		return (temp);
+		return (add_nodeint(head, n));
 	}
 
-	for (; ptr1 != NULL; ptr1 = ptr1->next)
+	for (; ptr != NULL; ptr = ptr->next)
 	{
-		if (count > 1)
-			ptr2 = ptr2->next;
-
 		if (count == idx)
 		{
-			temp->next = ptr1;
-			ptr2->next = temp;
+			temp->next = ptr->next;
+			prev->next = temp;
 			return (*head);
 		}
+		prev = ptr;
 
 		count++;
+	}
+	if (idx == count)
+	{
+		return (add_nodeint_end(head, n));
 	}
 
 	return (NULL);
