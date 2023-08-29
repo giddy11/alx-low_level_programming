@@ -47,31 +47,29 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 	if (temp == NULL)
 		return (NULL);
-
 	temp->n = n;
 	temp->next = NULL;
-
 	if (idx == 0)
 	{
+		free(temp);
 		return (add_nodeint(head, n));
 	}
-
 	for (; ptr != NULL; ptr = ptr->next)
 	{
 		if (count == idx)
 		{
-			temp->next = ptr->next;
+			temp->next = ptr;
 			prev->next = temp;
 			return (*head);
 		}
 		prev = ptr;
-
 		count++;
 	}
 	if (ptr == NULL && idx == count)
 	{
+		free(temp);
 		return (add_nodeint_end(head, n));
 	}
-
+	free(temp);
 	return (NULL);
 }
