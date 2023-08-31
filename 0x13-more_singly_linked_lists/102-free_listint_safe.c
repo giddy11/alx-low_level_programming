@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * looped_listint_len - Counts the number of unique nodes
+ * looped_listint_count - Counts the number of unique nodes
  *                      in a looped listint_t linked list.
  * @head: A pointer to the head of the listint_t to check.
  *
@@ -61,21 +61,21 @@ size_t free_listint_safe(listint_t **h)
 	if (nodes == 0)
 	{
 		for (; h != NULL && *h != NULL; nodes++)
-        {
-            temp = (*h)->next;
-            free(*h);
-            *h = temp;
-        }
+		{
+			temp = (*h)->next;
+			free(*h);
+			*h = temp;
+		}
 	}
 	else
 	{
 		for (i = 0; i < nodes; i++)
-        {
-            temp = (*h)->next;
-            free(*h);
-            *h = temp;
-        }
-        *h = NULL;
+		{
+			temp = (*h)->next;
+			free(*h);
+			*h = temp;
+		}
+		*h = NULL;
 	}
 
 	return (nodes);
