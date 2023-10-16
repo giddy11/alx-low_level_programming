@@ -1,3 +1,15 @@
+https://en.wikipedia.org/wiki/Debugging
+https://www.thoughtfulcode.com/rubber-duck-debugging-psychology/
+
+General
+What is debugging
+What are some methods of debugging manually
+How to read the error messages
+
+
+
+
+
 # Debugging in C Programming
 Debugging is the process of identifying and fixing errors or bugs in code. It is an essential skill for programmers as it helps to ensure that programs work as intended.
 
